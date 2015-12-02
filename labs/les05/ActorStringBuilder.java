@@ -32,7 +32,12 @@ class ActorStringBuilder {
         System.out.println("phone: " + phone);
         
         String phoneNumberAsString = phone.toString();
-        System.out.println("phoneNumberAsString: " + phoneNumberAsString);       
+        System.out.println("phoneNumberAsString: " + phoneNumberAsString);  
+        
+        String fullName = nameSB.toString();
+        String firstName = fullName.substring(0, fullName.indexOf(" "));
+        System.out.println("fullName: " + fullName);
+        System.out.println("firstName: " + firstName);
     }
     
 }
