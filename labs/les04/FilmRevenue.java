@@ -12,7 +12,7 @@ class FilmRevenue {
     
     public int xpto = 99;
     public long revenueValue = 0L;
-    public int movieGoers = 10000000;
+    public int movieGoers = 10_000_000;
     public int ticketPrice = 5;
     //public long result;
     

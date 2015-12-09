@@ -10,8 +10,14 @@
  */
 class Temperature {
 
+    float temperature;
+    
+    /**
+     *Convert the Fahrenheit temperature from Celsius multiplying by 9, dividing by 5 and by adding 32.
+     */
     void calculateFahrenheit() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        temperature = ( ( temperature * 9 ) / 5 ) + 32;
+        System.out.println( "Temperature(Fahrenheit): " + temperature );
     }
     
 }
