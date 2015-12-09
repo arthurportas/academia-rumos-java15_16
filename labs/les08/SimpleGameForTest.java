@@ -4,7 +4,7 @@ class SimpleGameForTest {
 
     SimpleGameFor mySequence = new SimpleGameFor();
 
-    mySequence.displaySequence();
-
+    //mySequence.displaySequence();
+    mySequence.displaySequenceWithForLoop();
   }
 }

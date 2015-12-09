@@ -1,6 +1,7 @@
 class MovieTheaterTest{
 
   public static void main(String args[]){
+      
     MovieTheater myChairMap =new MovieTheater();
     
     // Initialize the array
@@ -22,12 +23,12 @@ class MovieTheaterTest{
     myChairMap.displayChairMap();
     
     //Challenge Lab:  Searching the chair
-    //cm.name = "Donald";
-    //cm.searchChair();
+    myChairMap.name = "Donald";
+    myChairMap.searchChair();
 
    //Challenge Lab: Searching the chair
-    //cm.name = "Ronn";
-    //cm.searchChair();
+    myChairMap.name = "Ronn";
+    myChairMap.searchChair();
   } //end main
  }//end class
 

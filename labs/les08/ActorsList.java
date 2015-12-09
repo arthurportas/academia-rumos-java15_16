@@ -2,7 +2,8 @@
 import java.util.ArrayList;
 
 public class ActorsList {
-    public ArrayList listOfActors;
+    
+    public ArrayList<String> listOfActors;
     
     public void setList(){
         listOfActors = new ArrayList();
@@ -13,4 +14,9 @@ public class ActorsList {
         System.out.println("Size of ArrayList is: " + listOfActors.size());
     }
        
+    void displayNames(){
+        for (String nameOfActorInList : listOfActors) {
+            System.out.println("Name: " + nameOfActorInList);
+        }
+    }
 }

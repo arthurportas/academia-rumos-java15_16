@@ -11,6 +11,7 @@ import java.util.ArrayList;
  * @author administrator
  */
 public class FilmRentalArray {
+    
     public ArrayList filmsRentedDiscount;
     
     public void setVacationScale(){
@@ -23,12 +24,10 @@ public class FilmRentalArray {
         filmsRentedDiscount.add(20);
         filmsRentedDiscount.add(25);
     }
-
-    void setFilmRentalArray() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    void displayFilmRentalArray() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    
+    void displayVacationDays() {
+        for ( int i = 0; i < filmsRentedDiscount.size(); i++ ) {
+            System.out.println("Value: " + filmsRentedDiscount.get(i) + " at index: " + i);
+        }
     }
 }

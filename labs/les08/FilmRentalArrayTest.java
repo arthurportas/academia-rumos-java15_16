@@ -4,9 +4,8 @@ public class FilmRentalArrayTest {
  
     FilmRentalArray myFilmRentalArray = new FilmRentalArray();
   
-    myFilmRentalArray.setFilmRentalArray();
-
-    myFilmRentalArray.displayFilmRentalArray();
+    myFilmRentalArray.setVacationScale();
     
+    myFilmRentalArray.displayVacationDays();
   } 
 }
