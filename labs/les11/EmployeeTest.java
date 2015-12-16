@@ -20,17 +20,17 @@ public class EmployeeTest {
 
         myEditor.setName("Fred Hanson");
         myEditor.setJobTitle("Editor");
-        myEditor.calculateEmployeeID();
+        myEditor.calculateEmployeeId();
         myEditor.setLevel(1);
-        myEditor.setSkill("technical editing");
-        myEditor.setSkill("typing");
-        myEditor.setPrefersPaperEditing(true);
+        myEditor.setSkill("technical editing");//TODO: arthurportas missing work
+        myEditor.setSkill("typing");//TODO: arthurportas missing work
+        myEditor.setPrefersPaperEditing(true);//TODO: arthurportas missing work
         myEditor.displayInformation();
         System.out.println("**** *****");
 
         myGI.setJobTitle("Graphic Illustrator");
         myGI.setName("Frank Moses");
-        myGI.calculateEmployeeID();
+        myGI.calculateEmployeeId();
         myGI.setLevel(3);
         myGI.setSkill("technical illustration");
         myGI.setSkill("video production");
@@ -40,7 +40,7 @@ public class EmployeeTest {
 
         myTW.setName("James Ralph");
         myTW.setJobTitle("Technical Writer");
-        myTW.calculateEmployeeID();
+        myTW.calculateEmployeeId();
         myTW.setLevel(1);
         myTW.setSkill("technical writing");
         myTW.displayInformation();
@@ -48,11 +48,11 @@ public class EmployeeTest {
 
         myManager.setName("Susan Smith");
         myManager.setJobTitle("Manager");
-        myManager.calculateEmployeeID();
+        myManager.calculateEmployeeId();
         myManager.setLevel(2);
-        myManager.setEmployee(myEditor);
-        myManager.setEmployee(myGI);
-        myManager.setEmployee(myTW);
+        myManager.setEmployee(myEditor);//TODO: arthurportas missing work
+        myManager.setEmployee(myGI);//TODO: arthurportas missing work
+        myManager.setEmployee(myTW);//TODO: arthurportas missing work
         myManager.displayInformation();
     }
 }

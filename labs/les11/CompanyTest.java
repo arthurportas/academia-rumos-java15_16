@@ -21,7 +21,7 @@ public class CompanyTest {
         myCompany.setCompanyName("Duke's Choice");
         myCompany.setTaxID(5544332);
         myCompany.setCEO("Eleanor Duke");
-        myPrinter.printToScreen(myCompany);
+       // myPrinter.printToScreen(myCompany);
         
         myRegion.setRegion("Americas");
         myRegion.addCountry("US");
@@ -29,12 +29,12 @@ public class CompanyTest {
         myRegion.addCountry("Canada");
         myRegion.setRegManager("Eduardo Jimenez");
         myRegion.setAnnualSales(1_500_000);
-        myPrinter.printToScreen(myRegion);
+       // myPrinter.printToScreen(myRegion);
         
         myCountry.setCountry("US");
         myCountry.setCountryManager("Rodney Baker");
         myCountry.setLanguage("English");
         myCountry.setLanguage("Spanish");
-        myPrinter.printToScreen(myCountry);
+       // myPrinter.printToScreen(myCountry);
     }
 }

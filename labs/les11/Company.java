@@ -7,7 +7,8 @@
  *
  * @author Administrator
  */
-public class Company implements Printable{
+//TODO: arthurportas review interface
+public class Company {//implements Printable
     private String companyName;
     private int taxID;
     private String CEO;
