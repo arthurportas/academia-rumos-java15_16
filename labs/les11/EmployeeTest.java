@@ -22,9 +22,9 @@ public class EmployeeTest {
         myEditor.setJobTitle("Editor");
         myEditor.calculateEmployeeId();
         myEditor.setLevel(1);
-        myEditor.setSkill("technical editing");//TODO: arthurportas missing work
-        myEditor.setSkill("typing");//TODO: arthurportas missing work
-        myEditor.setPrefersPaperEditing(true);//TODO: arthurportas missing work
+        myEditor.setSkill("technical editing");
+        myEditor.setSkill("typing");
+        myEditor.setPrefersPaperEditing(true);
         myEditor.displayInformation();
         System.out.println("**** *****");
 
@@ -35,7 +35,7 @@ public class EmployeeTest {
         myGI.setSkill("technical illustration");
         myGI.setSkill("video production");
         myGI.setSkill("media authoring");
-        myGI.displayInformation();
+       // myGI.displayInformation();
         System.out.println("**** *****");
 
         myTW.setName("James Ralph");
@@ -43,7 +43,7 @@ public class EmployeeTest {
         myTW.calculateEmployeeId();
         myTW.setLevel(1);
         myTW.setSkill("technical writing");
-        myTW.displayInformation();
+     //   myTW.displayInformation();
         System.out.println("**** *****");
 
         myManager.setName("Susan Smith");

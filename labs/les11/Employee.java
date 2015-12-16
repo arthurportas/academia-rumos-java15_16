@@ -35,9 +35,14 @@ public class Employee {
      * 
      */
     public void displayInformation() {
-        // TODO implement here
+        System.out.println(toString());
     }
 
+    @Override
+    public String toString() {
+        return "Employee{" + "name=" + name + ", jobTitle=" + jobTitle + ", employeeId=" + employeeId + ", level=" + level + '}';
+    }
+    
     /**
      * 
      */

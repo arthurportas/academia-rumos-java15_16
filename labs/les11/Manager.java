@@ -10,12 +10,13 @@ public class Manager extends Employee {
      * Default constructor
      */
     public Manager() {
+        employeeList = new ArrayList<>();
     }
 
     /**
      * 
      */
-    public Employee[] employeeList;
+    public List<Employee> employeeList;
 
     /**
      * 
@@ -25,7 +26,9 @@ public class Manager extends Employee {
     }
 
     void setEmployee(SkilledEmployee skilledEmployee) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if( null != skilledEmployee) {
+            this.employeeList.add(skilledEmployee);
+        }
     }
 
 }

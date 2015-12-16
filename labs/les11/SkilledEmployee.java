@@ -10,29 +10,37 @@ public class SkilledEmployee extends Employee {
      * Default constructor
      */
     public SkilledEmployee() {
+        //skillList = new ArrayList<String>();
     }
 
     /**
      * 
      */
-    private String[] skillList;
+    private List<String> skillList = new ArrayList<String>();
 
     /**
      * 
      */
     public void displayInformation() {
-        // TODO implement here
+        super.displayInformation();
+        System.out.println(toString());
     }
 
-    public String[] getSkillList() {
+    public List<String> getSkillList() {
         return skillList;
     }
 
-    public void setSkillList(String[] skillList) {
+    public void setSkillList(List<String> skillList) {
         this.skillList = skillList;
     }
 
     void setSkill(String skill) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        this.skillList.add(skill);
     }
+
+    @Override
+    public String toString() {
+        return "SkilledEmployee{" + "skillList=" + skillList + '}';
+    }
+   
 }

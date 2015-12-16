@@ -21,11 +21,12 @@ public class Editor extends SkilledEmployee {
      * 
      */
     public void displayInformation() {
-        // TODO implement here
+           //System.out.println(super.toString());
+        super.displayInformation();
     }
 
-    void setPrefersPaperEditing(boolean b) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    void setPrefersPaperEditing(boolean preference) {
+        this.prefersPaperEditing = preference;
     }
 
 }
