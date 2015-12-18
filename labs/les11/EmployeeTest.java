@@ -1,3 +1,7 @@
+
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -40,7 +44,7 @@ public class EmployeeTest {
 
         myTW.setName("James Ralph");
         myTW.setJobTitle("Technical Writer");
-        myTW.calculateEmployeeId();
+        myTW.calculateEmployeeId();///suppose id = 2
         myTW.setLevel(1);
         myTW.setSkill("technical writing");
      //   myTW.displayInformation();
@@ -50,9 +54,50 @@ public class EmployeeTest {
         myManager.setJobTitle("Manager");
         myManager.calculateEmployeeId();
         myManager.setLevel(2);
+        
         myManager.setEmployee(myEditor);//TODO: arthurportas missing work
         myManager.setEmployee(myGI);//TODO: arthurportas missing work
         myManager.setEmployee(myTW);//TODO: arthurportas missing work
+       
+        
+        ///HERE
         myManager.displayInformation();
+        
+        //search for James
+        Employee james;
+        try {
+            james = myManager.findById( 4 );
+            if( null != james){
+            System.out.println(myManager.findById( 2 ).toString());
+            } else {
+                System.out.println("ERRO ");
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(EmployeeTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        System.out.println("------------END---------------------");
+        
+        try {
+            myManager.findById2(99);
+        } catch (EmployeeNotFoundException enfe) {
+            System.out.println(enfe.getMessage());
+        } catch (Exception ex) {
+            Logger.getLogger(EmployeeTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        
+//        try {
+//            myManager.findById2(99);
+//        } catch (Exception  enfe) {
+//            System.out.println(enfe.getMessage());
+//        } catch (EmployeeNotFoundException ex) {//never caught
+//            Logger.getLogger(EmployeeTest.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+        
+        try {
+            myManager.findById2(99);
+        } catch (Throwable t) {
+            System.out.println(t.getMessage());
+        } 
     }
 }

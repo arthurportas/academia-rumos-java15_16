@@ -47,7 +47,9 @@ public class Employee {
      * 
      */
     public void calculateEmployeeId() {
-        // TODO implement here
+        
+     
+    
     }
 
     //----------------GETTER/SETTERS

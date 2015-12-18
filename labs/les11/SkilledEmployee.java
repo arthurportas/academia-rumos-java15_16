@@ -23,6 +23,13 @@ public class SkilledEmployee extends Employee {
      */
     public void displayInformation() {
         super.displayInformation();
+//        for (int i = 0; i < skillList.size(); i++) {
+//            System.out.println(skillList.get(i));
+//        }
+        for (int i = 1; i <= skillList.size(); i++) {
+            System.out.println(skillList.get(i-1));
+        }
+        
         System.out.println(toString());
     }
 
