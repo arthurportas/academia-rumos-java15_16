@@ -3,16 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package pt.rumos.staffgest.models;
-
-import java.util.Date;
+package pt.rumos.staffgest.utils;
 
 /**
  *
  * @author Utilizador
  */
-public class Employee extends Person {
-    
-    Date dateOfBirth;
+public class AgeCalculator {
     
 }
