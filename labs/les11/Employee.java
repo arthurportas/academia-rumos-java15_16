@@ -3,7 +3,7 @@
 /**
  * @author Arthur Portas
  */
-public class Employee {
+public class Employee implements Printable{
 
     /**
      * Default constructor
@@ -35,7 +35,7 @@ public class Employee {
      * 
      */
     public void displayInformation() {
-        System.out.println(toString());
+        System.out.println( toString());
     }
 
     @Override
@@ -84,6 +84,12 @@ public class Employee {
 
     public void setLevel(int level) {
         this.level = level;
+    }
+
+    //call displayInformation
+    @Override
+    public void print() {
+        displayInformation();
     }
 
 }

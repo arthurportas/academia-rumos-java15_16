@@ -39,7 +39,7 @@ public class EmployeeTest {
         myGI.setSkill("technical illustration");
         myGI.setSkill("video production");
         myGI.setSkill("media authoring");
-       // myGI.displayInformation();
+        myGI.displayInformation();
         System.out.println("**** *****");
 
         myTW.setName("James Ralph");
@@ -47,7 +47,7 @@ public class EmployeeTest {
         myTW.calculateEmployeeId();///suppose id = 2
         myTW.setLevel(1);
         myTW.setSkill("technical writing");
-     //   myTW.displayInformation();
+        myTW.displayInformation();
         System.out.println("**** *****");
 
         myManager.setName("Susan Smith");
@@ -55,9 +55,9 @@ public class EmployeeTest {
         myManager.calculateEmployeeId();
         myManager.setLevel(2);
         
-        myManager.setEmployee(myEditor);//TODO: arthurportas missing work
-        myManager.setEmployee(myGI);//TODO: arthurportas missing work
-        myManager.setEmployee(myTW);//TODO: arthurportas missing work
+        myManager.setEmployee(myEditor);
+        myManager.setEmployee(myGI);
+        myManager.setEmployee(myTW);
        
         
         ///HERE
@@ -99,5 +99,8 @@ public class EmployeeTest {
         } catch (Throwable t) {
             System.out.println(t.getMessage());
         } 
+        
+        Printer p = new Printer();
+        p.printToScreen( myEditor );
     }
 }

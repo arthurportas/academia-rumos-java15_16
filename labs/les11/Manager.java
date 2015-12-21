@@ -4,7 +4,7 @@ import java.util.*;
 /**
  * @author Arthur Portas
  */
-public class Manager extends Employee {
+public class Manager extends Employee implements Printable{
 
     private String myCarBrand;//currently not printed
     

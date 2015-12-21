@@ -4,7 +4,7 @@ import java.util.*;
 /**
  * @author Arthur Portas
  */
-public class SkilledEmployee extends Employee {
+public class SkilledEmployee extends Employee implements Printable{
 
     /**
      * Default constructor
@@ -23,6 +23,9 @@ public class SkilledEmployee extends Employee {
      */
     public void displayInformation() {
         super.displayInformation();
+        
+        System.out.println("Manager has the following employees: ");
+        
 //        for (int i = 0; i < skillList.size(); i++) {
 //            System.out.println(skillList.get(i));
 //        }
