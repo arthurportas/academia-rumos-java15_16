@@ -18,7 +18,7 @@ public class Employee implements Printable {
         employeeIDCounter++;  // increment so that employeeID will be unique
         setEmployeeID(employeeIDCounter);
     }
-    
+    @Override
     public void print(){
         System.out.println("Name: "+ getName());
         System.out.println("Job Title: "+ getJobTitle());

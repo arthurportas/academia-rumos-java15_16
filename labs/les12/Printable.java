@@ -8,5 +8,5 @@
  * @author Administrator
  */
 public interface Printable {
-    public abstract void print();
+    abstract void print();
 }

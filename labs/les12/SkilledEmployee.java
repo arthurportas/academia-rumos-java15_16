@@ -11,10 +11,23 @@ import java.util.ArrayList;
  * @author Administrator
  */
 public class SkilledEmployee extends Employee{
+    
     public ArrayList skillList = new ArrayList();
     
-    public void setSkill(String skill){
-        skillList.add(skill);
+    public void setSkill(String skill) throws InvalidSkillException{
+        
+//        if(skill.substring(0,4).equals("COMP")){
+//            skillList.add(skill);
+//        }else {
+//            throw new InvalidSkillException("Invalid skill");
+//            //erro
+//        }
+        
+        
+        if( filterSkill( skill ) ){
+            skillList.add(skill);
+        }
+       
     }
     
     public ArrayList getSkills(){
@@ -26,6 +39,27 @@ public class SkilledEmployee extends Employee{
         for(Object obj : skillList){
             System.out.println("\t"+ obj);
         }
+    }
+
+    //PREFIX COMP:xxxxx
+//    private boolean filterSkill(String skill) {
+//        try {
+//            if(skill.substring(0,4).equals("COMP")){
+//                return true;
+//            }
+//        } catch (Exception e) {
+//            System.out.println(e.getMessage());
+//        }
+//        return false;
+//    }
+
+     private boolean filterSkill(String skill) throws InvalidSkillException{
+        
+         if(skill.substring(0,4).equals("COMP")){
+            return true;
+        }
+            throw new InvalidSkillException("Invalid skill");
+//        return false;
     }
 
 }
