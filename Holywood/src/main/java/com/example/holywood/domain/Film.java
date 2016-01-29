@@ -5,6 +5,8 @@ public abstract class Film {
 	private int id = 0;
 	private String title = "-required-";
 	private int year = 0;
+	protected double IMDBRating;
+	private Rating filmRating;
 	
 	public Film(int id, String title, int year) {
 		this.id = id;
@@ -36,16 +38,38 @@ public abstract class Film {
 		this.year = year;
 	}
 
+	public double getIMDBRating() {
+		return IMDBRating;
+	}
+
+	public void setIMDBRating(double iMDBRating) {
+		IMDBRating = iMDBRating;
+	}
+
+	public Rating getFilmRating() {
+		return filmRating;
+	}
+
+	public void setFilmRating(Rating filmRating) {
+		this.filmRating = filmRating;
+	}
+
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Film [id=")
-			.append(id)
-			.append(", title=")
-			.append(title)
-			.append(", year=")
-			.append(year)
-			.append("]");
+		builder.append("Film [id=");
+		builder.append(id);
+		builder.append(", title=");
+		builder.append(title);
+		builder.append(", year=");
+		builder.append(year);
+		builder.append(", IMDBRating=");
+		builder.append(IMDBRating);
+		builder.append(", filmRating=");
+		builder.append(filmRating);
+		builder.append("]");
 		return builder.toString();
 	}
+
+	
 }
