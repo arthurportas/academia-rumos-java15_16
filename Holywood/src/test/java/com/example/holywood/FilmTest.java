@@ -1,13 +1,12 @@
 package com.example.holywood;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
-import org.hamcrest.core.Is;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
 import com.example.holywood.domain.ActionFilm;
@@ -63,8 +62,20 @@ public class FilmTest {
 		assertTrue("Film 'Die Hard' should have NC17 rating", actionFilm.getFilmRating().equals(Rating.NC17));	
 	}
 	
+	@Test
+	public void testFilmTranslationIn_pt_PT(){
+	    ResourceBundle messages = ResourceBundle.getBundle("MessagesBundle", Locale.getDefault());
+		assertTrue("Film in pt_PT should be 'Filme'", messages.getString("hollywood.domain.film").equals("Filme"));	
+
+	}
 	
-	
+	@Test
+	public void testFilmTranslationIn_en_UK(){
+		Locale enUKLOcale = new Locale("en", "UK");
+	    ResourceBundle messages = ResourceBundle.getBundle("MessagesBundle", enUKLOcale);
+		assertTrue("Film in en_UK should be 'FilmUK'", messages.getString("hollywood.domain.film").equals("FilmUK"));	
+
+	}
 	
 	//test 20 action films and return number of ones that have the same rating
 	
