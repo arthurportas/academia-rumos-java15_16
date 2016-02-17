@@ -32,24 +32,32 @@ public class DBHelper {
 
 		}
 	}
-	
-	 private void writeResultSet(ResultSet resultSet) throws SQLException {
-		    // ResultSet is initially before the first data set
-		    while (resultSet.next()) {
-		      // It is possible to get the columns via name
-		      // also possible to get the columns via the column number
-		      // which starts at 1
-		      // e.g. resultSet.getSTring(2);
-		      int id = resultSet.getInt("id");
-		      String firstName = resultSet.getString("first_name");
-		      String lastName = resultSet.getString("last_name");
-		      String jobName = resultSet.getString("job_name");
-		      String jobKeyResp = resultSet.getString("job_key_resp");
-		      System.out.println("id: " + id);
-		      System.out.println("firstName: " + firstName);
-		      System.out.println("lastName: " + lastName);
-		      System.out.println("jobName: " + jobName);
-		      System.out.println("jobKeyResp: " + jobKeyResp);
-		    }
-		  }
+
+	private void writeResultSet(ResultSet resultSet) throws SQLException {
+		// ResultSet is initially before the first data set
+		while (resultSet.next()) {
+			// It is possible to get the columns via name
+			// also possible to get the columns via the column number
+			// which starts at 1
+			// e.g. resultSet.getSTring(2);
+			int id = resultSet.getInt("id");
+			String firstName = resultSet.getString("first_name");
+			String lastName = resultSet.getString("last_name");
+			String jobName = resultSet.getString("job_name");
+			String jobKeyResp = resultSet.getString("job_key_resp");
+			System.out.println("id: " + id);
+			System.out.println("firstName: " + firstName);
+			System.out.println("lastName: " + lastName);
+			System.out.println("jobName: " + jobName);
+			System.out.println("jobKeyResp: " + jobKeyResp);
+		}
+	}
+
+	public ResultSet executeStatement(String query) throws SQLException {
+		// Statements allow to issue SQL queries to the database
+		connect = DriverManager.getConnection("jdbc:derby://localhost:1527/staffgest");
+		statement = connect.createStatement();
+		// Result set get the result of the SQL query
+		return resultSet = statement.executeQuery(query);
+	}
 }
