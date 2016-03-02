@@ -11,15 +11,20 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQuery;
+import javax.persistence.OneToOne;
 
-/**
- *
- * @author Utilizador
- */
+
+@NamedQuery(name = Book.ALL_BOOKS_QUERY, query = Book.QUERIES_LIST_ALL)
 @Entity
 public class Book implements Serializable {
 
     private static final long serialVersionUID = 1L;
+    
+    public  static final String ALL_BOOKS_QUERY = "LIST ALL BOOKS";
+    
+    public  static final String QUERIES_LIST_ALL = "SELECT b FROM Book b";
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;//
@@ -32,7 +37,7 @@ public class Book implements Serializable {
     private String isbn;
     private Integer nbOfPage;
     private Boolean illustrations;
-
+    
     public Book() {
     }
 
