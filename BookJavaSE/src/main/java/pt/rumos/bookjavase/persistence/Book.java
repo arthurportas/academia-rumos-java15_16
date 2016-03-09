@@ -11,19 +11,25 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 
-
-@NamedQuery(name = Book.ALL_BOOKS_QUERY, query = Book.QUERIES_LIST_ALL)
+@NamedQueries({
+    @NamedQuery(name = Book.ALL_BOOKS_QUERY, query = Book.QUERIES_LIST_ALL),
+    @NamedQuery(name = Book.BOOK_BY_TITLE_LIKE, query = Book.QUERIES_LIST_ALL)
+})
 @Entity
 public class Book implements Serializable {
 
     private static final long serialVersionUID = 1L;
     
     public  static final String ALL_BOOKS_QUERY = "LIST ALL BOOKS";
+    public  static final String BOOK_BY_TITLE_LIKE = "LIST BOOKS WITH NAME LIKE";
     
     public  static final String QUERIES_LIST_ALL = "SELECT b FROM Book b";
+    public  static final String QUERIES_TITLE_LIKE = "SELECT b FROM Book b WHERE b.";
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -37,6 +43,7 @@ public class Book implements Serializable {
     private String isbn;
     private Integer nbOfPage;
     private Boolean illustrations;
+    private Integer availableInStock;
     
     public Book() {
     }
@@ -67,6 +74,20 @@ public class Book implements Serializable {
      */
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    /**
+     * @return the availableInStock
+     */
+    public Integer getAvailableInStock() {
+        return availableInStock;
+    }
+
+    /**
+     * @param availableInStock the availableInStock to set
+     */
+    public void setAvailableInStock(Integer availableInStock) {
+        this.availableInStock = availableInStock;
     }
 
     /**

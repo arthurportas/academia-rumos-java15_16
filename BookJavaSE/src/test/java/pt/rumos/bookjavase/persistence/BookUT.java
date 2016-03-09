@@ -106,6 +106,8 @@ public class BookUT {
     @Test
     public void findAllBooks() {
         
+        
+        
         persistNewBook();
         List<Book> result = em.createNamedQuery(Book.ALL_BOOKS_QUERY)
                 .getResultList();
